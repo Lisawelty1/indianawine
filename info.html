@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="apple-touch-startup-image" href="images/first.jpg">
+    <link rel="apple-touch-icon" href="images/">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="shortcut icon" sizes="192x192" href="icon.png"> <!--android icon-->
+
+    <!-- 120px by 120px for icon size -->
+    <script type="text/javascript" src="phone.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+<link href="/YOUR_PATH/favicon.ico" rel="icon" type="image/x-icon" />
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEAB
+AAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFha1AKampgC4s7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMzMzMzMAAAAzMzMzMwAAAAAAMwAAAAAAAAAzAAAAAAAAADMAAAAA
+AAAAMwAAAAAAAAAzAAAAAAAAAREQAAAAAAEREREQAAAAEREREREAAAERERERERAAAREREREREAABEREREREQAAMA
+AAAAADAAAwAAAAAAMAACIiIiIiIgDgBwAA4AcAAP5/AAD+fwAA/n8AAP5/AAD+fwAA/D8AAPAPAADgBwAAwAMAAMAD
+AADAAwAA3/sAAN/7AADAAwAA" rel="icon" type="image/x-icon" />
+
+
+    <title>Local Indiana Wineries</title>
+
+    <script>
+  function initPage() {
+     document.addEventListener("deviceready", deviceInfo, true);
+}
+</script>
+  </head>
+  <body onLoad="initPage();">
+  <div id="container">
+
+
+
+    <div id="map"></div>
+    <script>
+
+
+
+function initMap() {
+  var myLoc1 = {lat: 39.769822, lng: -86.145321};
+    var myLoc2 = {lat: 39.549481, lng: -86.231516};
+      var myLoc3 = {lat: 39.674398, lng: -85.957688};
+        var myLoc4 = {lat: 39.926487, lng: -86.101331 };
+          var myLoc5 = {lat: 39.951983, lng: -86.040877};
+            var myLoc6 = {lat: 39.671697, lng: -86.367711};
+              var myLoc7 = {lat: 41.724615, lng: -86.827688};
+                var myLoc8 = {lat: 39.190701, lng: -86.161752};
+                  var myLoc9 = {lat: 40.446638, lng: -86.843258};
+                    var myLoc10 = {lat: 39.241792, lng: -86.446580};
+                      var myLoc11 = {lat: 40.722494, lng: -86.762488};
+                        var myLoc12 = {lat: 39.282778, lng: -86.521391};
+                          var myLoc13 = {lat: 39.907674, lng: -86.257307};
+                            var myLoc14 = {lat: 39.951758, lng: -86.261706};
+                              var myLoc15 = {lat: 39.978411, lng: -86.128000};
+                                var myLoc16 = {lat: 40.025519, lng: -85.900252};
+
+
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: myLoc1
+
+  });
+
+
+
+
+
+
+// 1
+  var image = 'images/wine3.png';
+  var marker1 = new google.maps.Marker({
+    position: myLoc1,
+    map: map,
+    icon: image,
+    title: 'Easley Winery'
+  });
+      marker1.addListener('click', function() {
+      infowindow1.open(map, marker1);
+    });
+                      var contentString1 = '<div class=logo><img src="images/easley2.png"></div><h1> Easley Winery </h1>'+
+                      '<p><h2>205 N.College Avenue Indianapolis Indiana,46202</h2><h3>(317)-636-4516  </h3><br><h5> Monday-Saturday: 11:00am-6:00pm <br>Sunday: 12:00pm-4:00pm </h5><h6><a href="http://www.easleywinery.com//" target="_blank"> www.easlywinery.com</h6><div class="facebook"><a href="https://www.facebook.com/easleywinery/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div></p>';
+
+                        var infowindow1 = new google.maps.InfoWindow({
+                          content: contentString1
+                          });
+// 2
+var image = 'images/wine4.png';
+var marker2 = new google.maps.Marker({
+  position: myLoc2,
+  map: map,
+  icon:image,
+  title: 'Mallow Run Winery'
+});
+
+    marker2.addListener('click', function() {
+    infowindow2.open(map, marker2);
+    });
+
+                        var contentString2 = '<div class=logo2><img src="images/mallow.jpg"></div><br><br><br><br> <h1> Mallow Run Winery </h1>'+
+                        '<p><h2>6964 West Whiteland Road Bargersville, Indiana 46106 </h2><h3>(317)-422-1556 </h3><br><h5> Monday-Sunday 12:00pm-6:00pm </h5><h6><a href="http://mallowrun.com/" target="_blank"> www.mallowrun.com</h6><div class="facebook"><a href="https://www.facebook.com/mallowrun/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div> </p>';
+
+                          var infowindow2 = new google.maps.InfoWindow({
+                            content: contentString2
+                            });
+
+// 3
+var image = 'images/wine3.png';
+var marker3 = new google.maps.Marker({
+  position: myLoc3,
+  map: map,
+  icon:image,
+  title: 'Buck Creek Winery'
+});
+
+    marker3.addListener('click', function() {
+    infowindow3.open(map, marker3);
+    });
+
+                            var contentString3 = '<div class=logo2><img src="images/buck.png"></div><h1><br>Buck Creek Winery </h1>'+
+                            '<p><h2>11747 Indian Creek Road South Indianapolis, In 46259 </h2><h3> (317)-862-9463 </h3><br><h5> Monday-Saturday 10:00am-6:00pm <br> Sunday 1:00pm-6:00pm </h5> <h6><a href="http://buckcreekwinery.com/" target="_blank"> www.buckcreekwinery.com</h6><div class="facebook"><a href="https://www.facebook.com/buckcreek.winery/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75""></div></p>';
+
+                              var infowindow3 = new google.maps.InfoWindow({
+                                content: contentString3
+                                });
+
+// 4
+var image = 'images/wine4.png';
+var marker4 = new google.maps.Marker({
+  position: myLoc4,
+  map: map,
+  icon:image,
+  title: 'Coopers Hawk Winery & Restaurants'
+});
+
+    marker4.addListener('click', function() {
+    infowindow4.open(map, marker4);
+    });
+
+                                  var contentString4 = '<div class=logo2><img src="images/cooper.png"></div><br><h1>Coopers Hawk Winery & Restaurants </h1>'+
+                                  '<p><h2>2120 Southlake Mall, Suite 500 Marrillville, In 46410 </h2><h3> (219)-795-9463</h3><br><h5>Tasting hours:<br>Monday-Thursday 11:00am-9:30pm <br> Friday-Saturday 11:00am-10:30pm <br> Sunday 11:00am-9:00pm <br><br> Bar Hours:<br> Monday-Thursday 11:00am-10:30pm <br> Friday-Saturday 11:00am-11:30pm <br> Sunday 11:00am-10:00pm </h5><h6> <a href="https://www.coopershawkwinery.com/" target="_blank"> www.coopershawkwinery.com </h6><div class="facebook"><a href="https://www.facebook.com/coopershawk/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div></p>';
+
+                                    var infowindow4 = new google.maps.InfoWindow({
+                                      content: contentString4
+                                      });
+
+// 5
+var image = 'images/wine3.png';
+var marker5 = new google.maps.Marker({
+  position: myLoc5,
+  map: map,
+  icon:image,
+  title: 'Harmony Winery'
+});
+
+    marker5.addListener('click', function() {
+    infowindow5.open(map, marker5);
+    });
+
+                                      var contentString5 = '<div class=logo3><img src="images/harmony.png"></div><h1> Harmony Winery </h1>'+
+                                      '<p><h2>7350 Village Square Ln Fishers, In 46038 </h2><h3> (317)-588-9463 </h3><br><h5> Monday closed <br> Tuesday-Thursday 2:00pm-8:00pm <br> Friday 12:00pm-9:00pm <br> Saturday 12:00pm-4:00pm </h5><h6> <a href="http://www.harmonywinery.com/" target="_blank"> www.harmonywinery.com </h6><div class="facebook"><a href="https://www.facebook.com/Harmonywinery/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div></p>';
+
+                                        var infowindow5 = new google.maps.InfoWindow({
+                                          content: contentString5
+                                          });
+
+// 6
+var image = 'images/wine4.png';
+var marker6 = new google.maps.Marker({
+  position: myLoc6,
+  map: map,
+  icon:image,
+  title: 'Chateau Thomas Winery'
+});
+
+    marker6.addListener('click', function() {
+    infowindow6.open(map, marker6);
+    });
+
+                                              var contentString6 = '<div class=logo3><img src="images/ct.jpg"> </div> <br><br> <h1> Chateau Thomas Winery </h1>'+
+                                              '<p><h2>6291 Cambridge Way Plainfield, In 46168 </h2><h3> (317)-837-9463 </h3><br><h5> Monday- Thursday 10:00am-8:00pm <br> Friday-Saturday 10:00am-10:00pm <br> Sunday 12:00pm-6:00pm </h5><h6> <a href="http://www.chateauthomas.com/" target="_blank"> www.chateauthomas.com </h6><div class="facebook"><a href="https://www.facebook.com/ChateauThomasWinery/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div></p>';
+
+                                                var infowindow6 = new google.maps.InfoWindow({
+                                                  content: contentString6
+                                                  });
+
+// 7
+var image = 'images/wine3.png';
+var marker7 = new google.maps.Marker({
+  position: myLoc7,
+  map: map,
+  icon:image,
+  title: 'Shady Creek Winery'
+});
+
+    marker7.addListener('click', function() {
+    infowindow7.open(map, marker7);
+    });
+
+                                                var contentString7 = '<div class=logo3><img src="images/sc2.jpg"></div><h1> Shady Creek Winery </h1>'+
+                                                '<p><h2>2030 Tryon Road Michigan City, In 46360 </h2><h3>(219)-874-9463 </h3><br><h5>Monday-Tuesday closed <br> Wednesday-Saturday 11:00am-6:00pm <br> Sunday 12:00pm-5:00pm <br> (live music at 1:00pm) </h5><h6><a href="http://www.shadycreekwinery.com/Events_PQHX.html" target="_blank"> www.shadycreekwinery.com </h6><div class="facebook"><a href="https://www.facebook.com/shadycreekwinery/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div></p>';
+
+                                                  var infowindow7 = new google.maps.InfoWindow({
+                                                    content: contentString7
+                                                    });
+
+// 8
+var image = 'images/wine4.png';
+var marker8 = new google.maps.Marker({
+  position: myLoc8,
+  map: map,
+  icon:image,
+  title: 'Brown County Winery'
+});
+
+    marker8.addListener('click', function() {
+    infowindow8.open(map, marker8);
+    });
+
+                                                    var contentString8 = '<div class=logo3><img src="images/bc2.jpg"></div><br><br><br><h1> Brown County Winery </h1>'+
+                                                    '<p><h2>4520 State Road 40 East Nashville, In 47448 </h2><h3>(812)-988-6144 </h3><br><h5> Monday-Thurday 10:00am-5:00pm <br> Friday-Saturday 10:00am-5:30pm <br> Sunday 11:00am-5:00pm </h5><h6><a href="http://www.browncountywinery.com/" target="_blank"> www.browncountywinery.com</h6><div class="facebook"><a href="https://www.facebook.com/BrownCountyWinery/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div></p>';
+
+                                                      var infowindow8 = new google.maps.InfoWindow({
+                                                        content: contentString8
+                                                        });
+
+
+// 9
+var image = 'images/wine3.png';
+var marker9 = new google.maps.Marker({
+  position: myLoc9,
+  map: map,
+  icon:image,
+  title: 'Wild Cat Winery'
+});
+
+    marker9.addListener('click', function() {
+    infowindow9.open(map, marker9);
+    });
+
+
+                                                        var contentString9 = '<div class=logo3><img src="images/wc2.png"></div><h1> Wild Cat Creek Winery </h1>'+
+                                                        '<p><h2>3233 East 200 North Lafayette, In 47905</h2><h3> (765)-828-3498 </h3><br><h5> Monday-Saturday 11:00am-6:00pm <br> Sunday 12:00pm-5:00pm </h5><h6><a href="http://www.wildcatcreekwinery.com/" target="_blank"> www.wildcatcreekwinery.com</h6><div class="facebook"><a href="https://www.facebook.com/WildcatCreekWinery/?fref=nf"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div> </p>';
+
+                                                          var infowindow9 = new google.maps.InfoWindow({
+                                                            content: contentString9
+                                                            });
+
+// 10
+var image = 'images/wine4.png';
+var marker10 = new google.maps.Marker({
+  position: myLoc10,
+  map: map,
+  icon:image,
+  title: 'Butler Winery and Vineyards'
+});
+
+    marker10.addListener('click', function() {
+    infowindow10.open(map, marker10);
+    });
+
+
+                                                            var contentString10 = '<div class=logo3><img src="images/bw2.jpg"></div><h1> Butler Winery and Vineyards </h1>'+
+                                                            '<p><h2>6200 Easy Robinson Road Bloomington, In 47408 </h2><h3> (812)-332-6660</h3><br><h5> Monday-Saturday 10:00am-6:00pm <br> Sunday 12:00pm-5:00pm</h5><h6><a href="http://www.butlerwinery.com/" target="_blank"> www.butlerwinery.com </h6><div class="facebook"><a href="https://www.facebook.com/ButlerWineryandVineyards/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div> </p>';
+
+                                                              var infowindow10 = new google.maps.InfoWindow({
+                                                                content: contentString10
+                                                                });
+
+// 11
+var image = 'images/wine3.png';
+var marker11 = new google.maps.Marker({
+  position: myLoc11,
+  map: map,
+  icon:image,
+  title: 'Whyte Horse Winery'
+});
+
+    marker11.addListener('click', function() {
+    infowindow11.open(map, marker11);
+    });
+
+
+                                                              var contentString11 = '<div class=logo3><img src="images/wh2.jpg"></div><h1> Whyte Horse Winery </h1>'+
+                                                              '<p><h2>1510 South Airport Road Monticello, In 47960</h2><h3>  (574)-583-2345 </h3> <br><h5>Monday-Saturday 11:00am-7:00pm <br> Sunday 12:00pm-6:00pm </h5><h6><a href="http://www.whytehorsewinery.com/" target="_blank"> www.whytehorsewinery.com</h6> <div class="facebook"><a href="https://www.facebook.com/whytehorsewinery/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div></p>';
+
+                                                                var infowindow11 = new google.maps.InfoWindow({
+                                                                  content: contentString11
+                                                                  });
+
+
+
+// 12
+var image = 'images/wine4.png';
+var marker12 = new google.maps.Marker({
+  position: myLoc12,
+  map: map,
+  icon:image,
+  title: 'Oliver Winery'
+});
+
+    marker12.addListener('click', function() {
+    infowindow12.open(map, marker12);
+    });
+
+
+                                                                var contentString12 = '<div class=logo3><img src="images/ow.png"></div><h1> Oliver Winery </h1>'+
+                                                                '<p><h2>8024 North State Road 37 Bloomington, In 47404 </h2><h3> (812)-876-5800 </h3><br><h5> Monday-Saturday 10:00am-6:00pm <br> Sunday 12:00pm-6:00pm </h5><h6><a href="http://www.oliverwinery.com/" target="_blank"> www.oliverwinery.com </h6><div class="facebook"><a href="https://www.facebook.com/oliverwinery/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div></p>';
+
+                                                                  var infowindow12 = new google.maps.InfoWindow({
+                                                                    content: contentString12
+                                                                    });
+
+
+// 13
+var image = 'images/wine3.png';
+var marker13 = new google.maps.Marker({
+  position: myLoc13,
+  map: map,
+  icon:image,
+  title: 'Traders Point Winery'
+});
+
+    marker13.addListener('click', function() {
+    infowindow13.open(map, marker13);
+    });
+
+
+                                                                var contentString13 = '<div class=logo3><img src="images/tp.jpg"></div><h1> Traders Point Winery </h1>'+
+                                                                '<p><h2>5520 W 84th St, Indianapolis, IN 46268</h2><h3> (317) 879-9463 </h3><br><h5> Monday Closed <br> Tuesday - Saturday 12:00pm - 6:00pm <br> Sunday 1:00pm - 5:00pm <br><a href="http://www.traderspointwinery.com/" target="_blank"><br> www.traderspoint.com</h6><br><div class="facebook"><a href="https://www.facebook.com/Traders-Point-Winery-554371001313079/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div></p>';
+
+                                                                  var infowindow13 = new google.maps.InfoWindow({
+                                                                    content: contentString13
+                                                                    });
+
+
+// 14
+var image = 'images/wine4.png';
+var marker14 = new google.maps.Marker({
+position: myLoc14,
+map: map,
+icon:image,
+title: 'Hopwood Cellar Winery'
+});
+
+marker14.addListener('click', function() {
+infowindow14.open(map, marker14);
+});
+
+
+                                                          var contentString14 = '<div class=logo3><img src="images/hw.jpg"></div><h1> Hopwood Cellar Winery </h1>'+
+                                                          '<p><h2>12 E Cedar St, Zionsville, IN 46077</h2><h3> (317) 873-4099 </h3><br><h5> Monday - Thursday  12:00pm to 8pm <br> Friday 12:00pm to 9pm <br> Saturday 11:00am to 10pm <br> Sunday 12:00pm to 5pm <br><a href="http://www.hopwoodcellars.com/" target="_blank"><br> www.hopwoodcellars.com</h6> <br><div class="facebook"><a href="https://www.facebook.com/hopwoodcellars"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div></p>';
+
+                                                            var infowindow14 = new google.maps.InfoWindow({
+                                                              content: contentString14
+                                                              });
+
+
+
+// 15
+var image = 'images/wine3.png';
+var marker15 = new google.maps.Marker({
+  position: myLoc15,
+  map: map,
+  icon:image,
+  title: 'Peace Water Winery'
+});
+
+    marker15.addListener('click', function() {
+    infowindow15.open(map, marker15);
+    });
+
+
+                                                                var contentString15 = '<div class=logo3><img src="images/peace2.jpg"></div><h1> Peace Water Winery </h1>'+
+                                                                '<p><h2>37 W Main St, Carmel, IN 46032</h2><h3> (317) 810-1330 </h3><br><h5> Monday Closed <br> Tuesday -Thursday 2:00 pm - 8:00pm <br> Friday 2:00pm - 10:00pm <br> Saturday 12:00pm - 10:00pm <br> Sunday 12:00pm - 5:00pm <br><a href="http://www.peacewaterwinery.com/" target="_blank"><br> www.traderspoint.com</h6><br><div class="facebook"><a href="https://www.facebook.com/peacewaterwinery/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div></p>';
+
+                                                                  var infowindow15 = new google.maps.InfoWindow({
+                                                                    content: contentString15
+                                                                    });
+
+
+// 16
+var image = 'images/wine4.png';
+var marker16 = new google.maps.Marker({
+position: myLoc16,
+map: map,
+icon:image,
+title: 'Country Moon Winery'
+});
+
+marker16.addListener('click', function() {
+infowindow16.open(map, marker16);
+});
+
+
+                                                          var contentString16 = '<div class=logo3><img src="images/moon1.png"></div><h1> Country Moon Winery </h1>'+
+                                                          '<p><h2>16222 Prairie Baptist Rd, Noblesville, IN 46060</h2><h3> (317) 773-7942 </h3><br><h5> Open every Saturday 1:00pm - 7:00pm <br> Also open by appointment <br><a href="http://countrymoonwinery.com/" target="_blank"><br> www.traderspoint.com</h6><div class="facebook"><a href="https://www.facebook.com/CountryMoonWinery/?fref=ts"><img border="0" alt="facebook" src="winefb2.png" width="80" height="75"></div></p>';
+
+                                                            var infowindow16 = new google.maps.InfoWindow({
+                                                              content: contentString16
+                                                              });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvxN5rfSgidez3OPhwTyGOZU7Ja_NsiEA&signed_in=true&callback=initMap"></script>
+</div>
+        <script>
+          function(){
+          var pages = $("#map");
+          pages.css("left", "100%");
+          pages.css("display", "none");
+          }
+          </script>
+
+
+
+</script>
+
+  </body>
+</html>
